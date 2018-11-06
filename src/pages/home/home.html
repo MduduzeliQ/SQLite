@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color = "color" >
+    <ion-title>
+      Harvard West-Lake School
+    </ion-title>
+ 
+    <ion-buttons end>
+<button ion-button icon-only (click) = "AddCourse()">
+<ion-icon name = "add-circle" ></ion-icon>
+</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<ion-card >
+ <ion-list>
+ 
+        <ion-item-sliding *ngFor = "let mdu of data">
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="../../assets/geo.jpg">
+            </ion-avatar>
+        <h2>Name:</h2>
+        <h3>{{mdu.name}}</h3>
+        <h2>Description:</h2>
+        <h3>{{mdu.description}}</h3>
+        <h2>Price:</h2>
+        <h3>{{mdu.price}}</h3>   
+  </ion-item>
+      
+  <ion-item-options side = "left">
+    <button ion-button icon-only color = "primary" (click) = "update(mdu.id)" >
+  <ion-icon name = "ios-create">Edit</ion-icon>
+</button>
+  </ion-item-options>
+<br>               
+  <ion-item-options side = "right">
+      <button ion-button color = "danger" (click) = "deleteCourse(mdu.id)" >
+    <ion-icon name = "ios-trash">Delete</ion-icon>
+  </button>
+    </ion-item-options>
+ 
+        </ion-item-sliding>
+
+ 
+  </ion-list>
+ 
+</ion-card>
+</ion-content>

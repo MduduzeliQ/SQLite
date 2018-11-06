@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>adding Course</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Course Name</ion-label>
+    <ion-input type="text" [(ngModel)]="data.name" name="data.name"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Course Description</ion-label>
+    <ion-textarea [(ngModel)]="data.description" name="data.description"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+      <ion-label>Course Price</ion-label>
+      <ion-textarea [(ngModel)]="data.price" name="data.price"></ion-textarea>
+    </ion-item>
+
+  <button ion-button small type="submit" block (click)="saveData()">Save</button>
+
+</ion-content>
